@@ -373,7 +373,7 @@ if(!isset($_SESSION['admin_username'])){
                 
               <?php
                 
-                $query = "SELECT * FROM artwork LIMIT 15";
+                $query = "SELECT * FROM artwork  ORDER BY ART_DATE DESC LIMIT 15";
                 $results = mysqli_query($con, $query);
 
                 $index = 0;
@@ -453,7 +453,7 @@ if(!isset($_SESSION['admin_username'])){
         }
         #find the status of tthe artwork
 
-        $status_query = "SELECT ART_HIDDEN WHERE ART_ID = '$art_ID'";
+        $status_query = "SELECT ART_HIDDEN FROM artwork WHERE ART_ID = '$art_ID'";
         $status_results = mysqli_query($con,$status_query);
 
         $actual_pics_found = mysqli_num_rows($imageArray);
@@ -638,7 +638,14 @@ if(!isset($_SESSION['admin_username'])){
 <div class="row" style="margin-top: 2.5%">
 <span class="col-3">Orders: <?php echo $ordersQTY;?></span>
 <div class="col-2"></div>
-<button class="btn btn-danger col-3" style="margin-right: 1%" id="approve_button" name="approve_button" ><?php if($status == 0){ echo "Approve";} else{ echo "Disapprove";}?></button>
+<?php if($status == 0){
+  ?>
+<button class="btn btn-primary col-3" style="margin-right: 1%" id="approve_button" name="approve_button" data-toggle="modal" onclick="displayApproveModal()">Approve</button>
+  <?php
+} else {?>
+<button class="btn btn-danger col-3" style="margin-right: 1%" id="approve_button" name="approve_button" data-toggle="modal" onclick="displayDisapproveModal()">Disapprove</button>
+<?php
+}?>
 <button class="btn btn-warning col-3" style="margin-left: 1%">CONTACT</button>
 </div>
 
@@ -646,10 +653,6 @@ if(!isset($_SESSION['admin_username'])){
 </div>
 </div>
     </div>
-
-
-</script>
-
     <div class="row">
       
       <div class="card col-8">
@@ -690,6 +693,15 @@ function displayUnblockModal(actual_email){
   document.getElementById("recipient-name-personal").value=actual_email;
   $('#exampleModal2').modal();
 }
+
+function displayApproveModal(){
+  $('#approveModal').modal();
+}
+
+function displayDisapproveModal(){
+  $('#disapproveModal').modal();
+}
+
 </script>
           <table class="table m-0">
             <thead>
@@ -788,9 +800,9 @@ function displayUnblockModal(actual_email){
                   $item_ID = $row["ART_ID"];
                   $item_name_query = "SELECT ART_NAME FROM artwork WHERE ART_ID = '$item_ID'";
                   $result_name = mysqli_query($con,$item_name_query); 
-                   $seller_ID = $row["SELLER_ID"];
-                   $seller_name_query = "SELECT FULL_NAME FROM users WHERE USER_ID = '$seller_ID'";
-                   $result_seller_name = mysqli_query($con,$seller_name_query);
+                  $seller_ID = $row["SELLER_ID"];
+                  $seller_name_query = "SELECT FULL_NAME FROM users WHERE USER_ID = '$seller_ID'";
+                  $result_seller_name = mysqli_query($con,$seller_name_query);
                    while($item_seller = mysqli_fetch_assoc($result_seller_name)){
                        
                        $seller_name_actual = $item_seller["FULL_NAME"];
@@ -981,6 +993,65 @@ function displayUnblockModal(actual_email){
     </div>
   </div>
 </div>
+
+
+<div class="modal" tabindex="-1" role="dialog" id="approveModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Approve</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Do you want to approve this art?</p>
+      </div>
+      <div class="modal-footer">
+        <a href="?view=<?php echo $art_ID;?>&approveBtn=true" type="button" class="btn btn-primary" name="approveBtn">Yes</a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="disapproveModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Disapprove</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>You are about to block this art from users. </br> Are you sure?</p>
+      </div>
+      <div class="modal-footer">
+        <a href="?view=<?php echo $art_ID;?>&disapproveBtn=true" type="button" class="btn btn-primary" name="approveBtn">Yes</a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<?php
+
+if(isset($_GET['approveBtn'])){
+  $update_query = "UPDATE artwork SET ART_HIDDEN = '1' WHERE ART_ID = '$art_ID'";
+  mysqli_query($con,$update_query);
+  echo '<script>';
+  echo 'window.location="./?view=';
+  echo  $art_ID;
+  echo '"';
+  echo '</script>';
+
+}else if($_GET['disapproveBtn']){
+  $update_query = "UPDATE artwork SET ART_HIDDEN = '0' WHERE ART_ID = '$art_ID'";
+  mysqli_query($con,$update_query);
+}
+
+?>
 
 <script>
 function sortTable(n,myTableId) {

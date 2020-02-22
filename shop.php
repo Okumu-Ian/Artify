@@ -116,7 +116,7 @@ include 'header.php';
               if(isset($_POST['s'])){
                   
               $search = $_POST['s'];
-              $query = "SELECT * FROM artwork WHERE ART_NAME LIKE '%{$search}%' OR ART_CATEGORY LIKE '%{$search}%'ORDER BY ART_DATE DESC";
+              $query = "SELECT * FROM artwork WHERE ART_NAME LIKE '%{$search}%' OR ART_CATEGORY LIKE '%{$search}%' AND ART_HIDDEN = '1' ORDER BY ART_DATE DESC";
               $results = mysqli_query($con,$query);
               if(mysqli_num_rows($results) > 0){
             
@@ -147,7 +147,7 @@ include 'header.php';
                   
               }else{
 
-              $query = "SELECT * FROM artwork ORDER BY ART_DATE DESC";
+              $query = "SELECT * FROM artwork WHERE ART_HIDDEN = '1' ORDER BY ART_DATE DESC";
               $results = mysqli_query($con,$query);
               if(mysqli_num_rows($results) > 0){
             
@@ -213,20 +213,20 @@ include 'header.php';
               <h3 class="mb-3 h6 text-uppercase text-black d-block">Categories</h3>
              <ul class="list-unstyled mb-0">
                 <?php
-                $sql1 = "SELECT COUNT(ART_CATEGORY) FROM artwork WHERE ART_CATEGORY = 'Drawing'";
-                $sql2 = "SELECT COUNT(ART_CATEGORY) FROM artwork WHERE ART_CATEGORY = 'Sculpture'";
-                $sql3 = "SELECT COUNT(ART_CATEGORY) FROM artwork WHERE ART_CATEGORY = 'Photography'";
-                $sql4 = "SELECT COUNT(ART_CATEGORY) FROM artwork WHERE ART_CATEGORY = 'Prints'";
-                $sql5 = "SELECT COUNT(ART_CATEGORY) FROM artwork WHERE ART_CATEGORY = 'Paintings'";
-                $sql6 = "SELECT COUNT(ART_CATEGORY) FROM artwork WHERE ART_CATEGORY = 'Collectibles'";
-                $sql7 = "SELECT COUNT(ART_CATEGORY) FROM artwork WHERE ART_CATEGORY = 'Jewelery and Accessories'";
-                $sql8 = "SELECT COUNT(ART_CATEGORY) FROM artwork WHERE ART_CATEGORY = 'Vintage'";
-                $sql9 = "SELECT COUNT(ART_CATEGORY) FROM artwork WHERE ART_CATEGORY = 'Clip Art'";
-                $sql10 = "SELECT COUNT(ART_CATEGORY) FROM artwork WHERE ART_CATEGORY = 'Dolls and Miniatures'";
-                $sql11 = "SELECT COUNT(ART_CATEGORY) FROM artwork WHERE ART_CATEGORY = 'Fiber Art'";
-                $sql12 = "SELECT COUNT(ART_CATEGORY) FROM artwork WHERE ART_CATEGORY = 'Mixed Media and Collage'";
-                $sql13 = "SELECT COUNT(ART_CATEGORY) FROM artwork WHERE ART_CATEGORY = 'Fine Art Ceramics'";
-                $sql14 = "SELECT COUNT(ART_CATEGORY) FROM artwork WHERE ART_CATEGORY = 'Glass Art'";
+                $sql1 = "SELECT COUNT(ART_CATEGORY) FROM artwork WHERE ART_CATEGORY = 'Drawing' AND ART_HIDDEN = '1'";
+                $sql2 = "SELECT COUNT(ART_CATEGORY) FROM artwork WHERE ART_CATEGORY = 'Sculpture' AND ART_HIDDEN = '1'";
+                $sql3 = "SELECT COUNT(ART_CATEGORY) FROM artwork WHERE ART_CATEGORY = 'Photography' AND ART_HIDDEN = '1'";
+                $sql4 = "SELECT COUNT(ART_CATEGORY) FROM artwork WHERE ART_CATEGORY = 'Prints' AND ART_HIDDEN = '1'";
+                $sql5 = "SELECT COUNT(ART_CATEGORY) FROM artwork WHERE ART_CATEGORY = 'Paintings' AND ART_HIDDEN = '1'";
+                $sql6 = "SELECT COUNT(ART_CATEGORY) FROM artwork WHERE ART_CATEGORY = 'Collectibles' AND ART_HIDDEN = '1'";
+                $sql7 = "SELECT COUNT(ART_CATEGORY) FROM artwork WHERE ART_CATEGORY = 'Jewelery and Accessories' AND ART_HIDDEN = '1'";
+                $sql8 = "SELECT COUNT(ART_CATEGORY) FROM artwork WHERE ART_CATEGORY = 'Vintage' AND ART_HIDDEN = '1'";
+                $sql9 = "SELECT COUNT(ART_CATEGORY) FROM artwork WHERE ART_CATEGORY = 'Clip Art' AND ART_HIDDEN = '1'";
+                $sql10 = "SELECT COUNT(ART_CATEGORY) FROM artwork WHERE ART_CATEGORY = 'Dolls and Miniatures' AND ART_HIDDEN = '1'";
+                $sql11 = "SELECT COUNT(ART_CATEGORY) FROM artwork WHERE ART_CATEGORY = 'Fiber Art' AND ART_HIDDEN = '1'";
+                $sql12 = "SELECT COUNT(ART_CATEGORY) FROM artwork WHERE ART_CATEGORY = 'Mixed Media and Collage' AND ART_HIDDEN = '1'";
+                $sql13 = "SELECT COUNT(ART_CATEGORY) FROM artwork WHERE ART_CATEGORY = 'Fine Art Ceramics' AND ART_HIDDEN = '1'";
+                $sql14 = "SELECT COUNT(ART_CATEGORY) FROM artwork WHERE ART_CATEGORY = 'Glass Art' AND ART_HIDDEN = '1'";
 
                 $result1 = mysqli_query($con,$sql1);
                 $result2 = mysqli_query($con,$sql2);

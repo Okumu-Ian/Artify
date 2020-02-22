@@ -425,8 +425,8 @@ while($row = mysqli_fetch_array($result2)){
                                                     '<td>
                                                        <div class="row">
                                                          <div class="col-md-3"></div>
-                                                         <div class="col-md-3"><a class="btn btn-primary" type="button" href=?update='.$row["ART_ID"].'>UPDATE</a></div>
-                                                         <div class="col-md-3"><a class="btn btn-danger" type="button" href=?delete='.$row["ART_ID"].'>DELETE</a></div>
+                                                         <div class="col-md-3"><a class="btn btn-primary" type="button" style = "width=auto; margin:auto" href=?update='.$row["ART_ID"].'>UPDATE</a></div>
+                                                         <div class="col-md-3"><a class="btn btn-danger" type="button" style = "width=auto; margin:auto" href=?delete='.$row["ART_ID"].'>DELETE</a></div>
                                                          <div class="col-md-3"></div>
                                                      </div>
                                                     </td>
@@ -795,7 +795,7 @@ while($row = mysqli_fetch_array($result2)){
                                 
           Select photos : 
           <input type='file' name='file[]' id='file' class='' style="padding:5%;" multiple><br>
-          <input type='button' class='btn btn-info' value='Preview' id='btn_upload'>
+          <!-- <input type='button' class='btn btn-info' value='Preview' id='btn_upload'> -->
         
 
         <!-- Preview-->

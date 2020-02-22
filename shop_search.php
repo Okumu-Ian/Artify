@@ -4,7 +4,7 @@ if($_POST['filter_category']){
     
     $filter_values = $_POST['filter_category'];
     
-     $query = "SELECT * FROM artwork WHERE ART_NAME LIKE '%{$filter_values}%' OR ART_CATEGORY LIKE '%{$filter_values}%' ORDER BY ART_DATE DESC";
+     $query = "SELECT * FROM artwork WHERE ART_CATEGORY LIKE '%{$filter_values}%' AND ART_HIDDEN = '1' ORDER BY ART_DATE DESC";
      $results = mysqli_query($con,$query);
        if(mysqli_num_rows($results) > 0){
             
@@ -20,7 +20,7 @@ if($_POST['filter_category']){
                   '<div class="block-4-text p-4">'.
                     '<h3><a href="?item='.$row['ART_ID'].'">'.$row['ART_NAME']
                     .'</a></h3>'.
-                    '<p class="mb-0">'.$row['ART_DESCRIPTION']
+                    '<p class="mb-0 max-lines">'.$row['ART_DESCRIPTION']
                     .'</p>'
                     .'<p class="text-primary font-weight-bold">Ksh '
                     .$row['ART_PRICE']
@@ -42,7 +42,7 @@ if($_POST['filter_category']){
     $max = $_POST['max_price'];
     $min = $_POST['minimum_price'];
     
-    $query = "SELECT * FROM artwork WHERE ART_PRICE between '$min' AND '$max'";
+    $query = "SELECT * FROM artwork WHERE ART_PRICE between '$min' AND '$max' AND ART_HIDDEN = '1'";
     
     $results = mysqli_query($con,$query);
     
