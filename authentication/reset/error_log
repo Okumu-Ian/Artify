@@ -1,0 +1,83 @@
+[12-Jan-2020 15:21:29 UTC] PHP Warning:  require_once(forgot-pass-recovery-mail.php): failed to open stream: No such file or directory in /home/vootbxke/public_html/artify/authentication/reset/index.php on line 58
+[12-Jan-2020 15:21:29 UTC] PHP Fatal error:  require_once(): Failed opening required 'forgot-pass-recovery-mail.php' (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home/vootbxke/public_html/artify/authentication/reset/index.php on line 58
+[12-Jan-2020 15:24:47 UTC] PHP Warning:  require_once(forgot-pass-recovery-mail.php): failed to open stream: No such file or directory in /home/vootbxke/public_html/artify/authentication/reset/index.php on line 58
+[12-Jan-2020 15:24:47 UTC] PHP Fatal error:  require_once(): Failed opening required 'forgot-pass-recovery-mail.php' (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home/vootbxke/public_html/artify/authentication/reset/index.php on line 58
+[12-Jan-2020 15:27:04 UTC] PHP Warning:  require_once(forgot-pass-recovery-mail.php): failed to open stream: No such file or directory in /home/vootbxke/public_html/artify/authentication/reset/index.php on line 58
+[12-Jan-2020 15:27:04 UTC] PHP Fatal error:  require_once(): Failed opening required 'forgot-pass-recovery-mail.php' (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home/vootbxke/public_html/artify/authentication/reset/index.php on line 58
+[12-Jan-2020 15:27:19 UTC] PHP Warning:  require_once(forgot-pass-recovery-mail.php): failed to open stream: No such file or directory in /home/vootbxke/public_html/artify/authentication/reset/index.php on line 58
+[12-Jan-2020 15:27:19 UTC] PHP Fatal error:  require_once(): Failed opening required 'forgot-pass-recovery-mail.php' (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home/vootbxke/public_html/artify/authentication/reset/index.php on line 58
+[12-Jan-2020 15:27:27 UTC] PHP Warning:  require_once(forgot-pass-recovery-mail.php): failed to open stream: No such file or directory in /home/vootbxke/public_html/artify/authentication/reset/index.php on line 58
+[12-Jan-2020 15:27:27 UTC] PHP Fatal error:  require_once(): Failed opening required 'forgot-pass-recovery-mail.php' (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home/vootbxke/public_html/artify/authentication/reset/index.php on line 58
+[12-Jan-2020 15:29:15 UTC] PHP Warning:  require_once(forgot-pass-recovery-mail.php): failed to open stream: No such file or directory in /home/vootbxke/public_html/artify/authentication/reset/index.php on line 67
+[12-Jan-2020 15:29:15 UTC] PHP Fatal error:  require_once(): Failed opening required 'forgot-pass-recovery-mail.php' (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home/vootbxke/public_html/artify/authentication/reset/index.php on line 67
+[12-Jan-2020 15:30:36 UTC] PHP Warning:  require_once(./forgot-pass-recovery-mail.php): failed to open stream: No such file or directory in /home/vootbxke/public_html/artify/authentication/reset/index.php on line 67
+[12-Jan-2020 15:30:36 UTC] PHP Fatal error:  require_once(): Failed opening required './forgot-pass-recovery-mail.php' (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home/vootbxke/public_html/artify/authentication/reset/index.php on line 67
+[12-Jan-2020 15:32:18 UTC] PHP Warning:  require_once(forgot-pass-recover-mail.php): failed to open stream: No such file or directory in /home/vootbxke/public_html/artify/authentication/reset/index.php on line 67
+[12-Jan-2020 15:32:18 UTC] PHP Fatal error:  require_once(): Failed opening required 'forgot-pass-recover-mail.php' (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home/vootbxke/public_html/artify/authentication/reset/index.php on line 67
+[12-Jan-2020 15:34:08 UTC] PHP Warning:  require_once(./forgot-pass-recover-mail.php): failed to open stream: No such file or directory in /home/vootbxke/public_html/artify/authentication/reset/index.php on line 67
+[12-Jan-2020 15:34:08 UTC] PHP Fatal error:  require_once(): Failed opening required './forgot-pass-recover-mail.php' (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home/vootbxke/public_html/artify/authentication/reset/index.php on line 67
+[12-Jan-2020 15:35:33 UTC] PHP Warning:  require(../mailer/_lib//class.smtp.php): failed to open stream: No such file or directory in /home/vootbxke/public_html/artify/authentication/reset/forgot-pass-recover-email.php on line 4
+[12-Jan-2020 15:35:33 UTC] PHP Warning:  require(../mailer/_lib//class.smtp.php): failed to open stream: No such file or directory in /home/vootbxke/public_html/artify/authentication/reset/forgot-pass-recover-email.php on line 4
+[12-Jan-2020 15:35:33 UTC] PHP Fatal error:  require(): Failed opening required '../mailer/_lib//class.smtp.php' (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home/vootbxke/public_html/artify/authentication/reset/forgot-pass-recover-email.php on line 4
+[12-Jan-2020 15:40:26 UTC] PHP Notice:  Undefined variable: user in /home/vootbxke/public_html/artify/authentication/reset/forgot-pass-recover-email.php on line 12
+[12-Jan-2020 15:40:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method PHPMailer::SetFrom() in /home/vootbxke/public_html/artify/authentication/reset/forgot-pass-recover-email.php:31
+Stack trace:
+#0 /home/vootbxke/public_html/artify/authentication/reset/index.php(67): require_once()
+#1 {main}
+  thrown in /home/vootbxke/public_html/artify/authentication/reset/forgot-pass-recover-email.php on line 31
+[12-Jan-2020 15:41:09 UTC] PHP Notice:  Undefined variable: user in /home/vootbxke/public_html/artify/authentication/reset/forgot-pass-recover-email.php on line 12
+[12-Jan-2020 15:41:09 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method PHPMailer::SetFrom() in /home/vootbxke/public_html/artify/authentication/reset/forgot-pass-recover-email.php:31
+Stack trace:
+#0 /home/vootbxke/public_html/artify/authentication/reset/index.php(67): require_once()
+#1 {main}
+  thrown in /home/vootbxke/public_html/artify/authentication/reset/forgot-pass-recover-email.php on line 31
+[12-Jan-2020 15:41:43 UTC] PHP Notice:  Undefined variable: user in /home/vootbxke/public_html/artify/authentication/reset/forgot-pass-recover-email.php on line 12
+[12-Jan-2020 15:41:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method PHPMailer::SetFrom() in /home/vootbxke/public_html/artify/authentication/reset/forgot-pass-recover-email.php:31
+Stack trace:
+#0 /home/vootbxke/public_html/artify/authentication/reset/index.php(67): require_once()
+#1 {main}
+  thrown in /home/vootbxke/public_html/artify/authentication/reset/forgot-pass-recover-email.php on line 31
+[27-Jan-2020 12:50:18 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method PHPMailer::SetFrom() in /home/vootbxke/public_html/artify/authentication/reset/forgot-pass-recover-email.php:31
+Stack trace:
+#0 /home/vootbxke/public_html/artify/authentication/reset/index.php(67): require_once()
+#1 {main}
+  thrown in /home/vootbxke/public_html/artify/authentication/reset/forgot-pass-recover-email.php on line 31
+[20-Feb-2020 06:56:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method PHPMailer::SetFrom() in /home/vootbxke/public_html/artify/authentication/reset/forgot-pass-recover-email.php:31
+Stack trace:
+#0 /home/vootbxke/public_html/artify/authentication/reset/index.php(67): require_once()
+#1 {main}
+  thrown in /home/vootbxke/public_html/artify/authentication/reset/forgot-pass-recover-email.php on line 31
+[20-Feb-2020 06:58:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method PHPMailer::setFrom() in /home/vootbxke/public_html/artify/authentication/reset/forgot-pass-recover-email.php:31
+Stack trace:
+#0 /home/vootbxke/public_html/artify/authentication/reset/index.php(67): require_once()
+#1 {main}
+  thrown in /home/vootbxke/public_html/artify/authentication/reset/forgot-pass-recover-email.php on line 31
+[20-Feb-2020 07:11:51 UTC] PHP Warning:  Use of undefined constant SENDER_EMAIL - assumed 'SENDER_EMAIL' (this will throw an Error in a future version of PHP) in /home/vootbxke/public_html/artify/authentication/reset/forgot-pass-recover-email.php on line 31
+[20-Feb-2020 07:11:51 UTC] PHP Warning:  Use of undefined constant SENDER_EMAIL - assumed 'SENDER_EMAIL' (this will throw an Error in a future version of PHP) in /home/vootbxke/public_html/artify/authentication/reset/forgot-pass-recover-email.php on line 33
+[20-Feb-2020 07:11:51 UTC] PHP Warning:  Use of undefined constant SENDER_EMAIL - assumed 'SENDER_EMAIL' (this will throw an Error in a future version of PHP) in /home/vootbxke/public_html/artify/authentication/reset/forgot-pass-recover-email.php on line 34
+[20-Feb-2020 07:11:51 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function eregi() in /home/vootbxke/public_html/artify/authentication/mailer/_lib/class.phpmailer.php:594
+Stack trace:
+#0 /home/vootbxke/public_html/artify/authentication/mailer/_lib/class.phpmailer.php(519): PHPMailer->SmtpConnect()
+#1 /home/vootbxke/public_html/artify/authentication/mailer/_lib/class.phpmailer.php(412): PHPMailer->SmtpSend('Date: Thu, 20 F...', '--b1_e165c617e5...')
+#2 /home/vootbxke/public_html/artify/authentication/reset/forgot-pass-recover-email.php(40): PHPMailer->Send()
+#3 /home/vootbxke/public_html/artify/authentication/reset/index.php(67): require_once('/home/vootbxke/...')
+#4 {main}
+  thrown in /home/vootbxke/public_html/artify/authentication/mailer/_lib/class.phpmailer.php on line 594
+[20-Feb-2020 07:18:35 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function eregi() in /home/vootbxke/public_html/artify/authentication/mailer/_lib/class.phpmailer.php:594
+Stack trace:
+#0 /home/vootbxke/public_html/artify/authentication/mailer/_lib/class.phpmailer.php(519): PHPMailer->SmtpConnect()
+#1 /home/vootbxke/public_html/artify/authentication/mailer/_lib/class.phpmailer.php(412): PHPMailer->SmtpSend('Date: Thu, 20 F...', '--b1_c0ee9ffcda...')
+#2 /home/vootbxke/public_html/artify/authentication/reset/forgot-pass-recover-email.php(40): PHPMailer->Send()
+#3 /home/vootbxke/public_html/artify/authentication/reset/index.php(67): require_once('/home/vootbxke/...')
+#4 {main}
+  thrown in /home/vootbxke/public_html/artify/authentication/mailer/_lib/class.phpmailer.php on line 594
+[21-Feb-2020 06:42:14 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function eregi() in /home/vootbxke/public_html/artify/authentication/mailer/_lib/class.phpmailer.php:594
+Stack trace:
+#0 /home/vootbxke/public_html/artify/authentication/mailer/_lib/class.phpmailer.php(519): PHPMailer->SmtpConnect()
+#1 /home/vootbxke/public_html/artify/authentication/mailer/_lib/class.phpmailer.php(412): PHPMailer->SmtpSend('Date: Fri, 21 F...', '--b1_2deaa24ada...')
+#2 /home/vootbxke/public_html/artify/authentication/reset/forgot-pass-recover-email.php(40): PHPMailer->Send()
+#3 /home/vootbxke/public_html/artify/authentication/reset/index.php(67): require_once('/home/vootbxke/...')
+#4 {main}
+  thrown in /home/vootbxke/public_html/artify/authentication/mailer/_lib/class.phpmailer.php on line 594
+[21-Feb-2020 06:45:59 UTC] PHP Warning:  preg_match(): No ending delimiter '^' found in /home/vootbxke/public_html/artify/authentication/mailer/_lib/class.phpmailer.php on line 594
+[21-Feb-2020 06:47:48 UTC] PHP Warning:  preg_match(): Unknown modifier ':' in /home/vootbxke/public_html/artify/authentication/mailer/_lib/class.phpmailer.php on line 594
